@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
     <html lang="en">
     
@@ -31,7 +29,6 @@
                                     <input type="text" class="form-control" id="ttl" name="ttl"
                                         placeholder="Tulis ttl">
                                 </div>
-
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Unit</label>
                                     <input type="text" class="form-control" id="unit" name="unit"
@@ -40,18 +37,16 @@
     
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Jenis Kelamin</label>
-                                    <select name="jenis-kelamin" class="form-control" id="jenis-kelamin">
-                                        <option value="laki-laki">Laki-laki</option>
-                                        <option value="perempuan">Perempuan</option>
+                                    <select name="gender" class="form-control" id="gender">
+                                        <option value="L">Laki-laki</option>
+                                        <option value="P">Perempuan</option>
                                     </select>
                                 </div>
-
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Alamat</label>
                                     <input type="text" class="form-control" id="alamat" name="alamat"
                                         placeholder="Tulis alamat">
                                 </div>
-
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Nomor HP</label>
                                     <input type="text" class="form-control" id="nomor-hp" name="nomor-hp"
@@ -91,7 +86,7 @@
                         unit: {
                             required: true
                         },
-                        'jenis-kelamin': {
+                        gender: {
                             required: true
                         },
                         alamat: {
@@ -116,7 +111,7 @@
                         document.getElementById("nama").value = "";
                         document.getElementById("ttl").value = "";
                         document.getElementById("unit").value = "";
-                        document.getElementById("jenis-kelamin").value = "";
+                        document.getElementById("gender").value = "";
                         document.getElementById("alamat").value = "";
                         document.getElementById("nomor-hp").value = "";
                         return false;

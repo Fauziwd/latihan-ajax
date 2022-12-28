@@ -1,15 +1,14 @@
-
-
 <table class="table table-striped">
     <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">No</th>
             <th scope="col">Nama</th>
             <th scope="col">TTL</th>
             <th scope="col">Unit</th>
             <th scope="col">Jenis Kelamin</th>
             <th scope="col">Alamat</th>
             <th scope="col">Nomor HP</th>
+            <th scope="col">Aksi</th>
         </tr>
     </thead>
     <tbody>
@@ -33,7 +32,7 @@
                             <?php echo $result['unit']; ?>
                         </td>
                         <td>
-                            <?php echo $result['jenis-kelamin']; ?>
+                            <?php echo $result['gender']; ?>
                         </td>
                         <td>
                             <?php echo $result['alamat']; ?>
@@ -41,9 +40,30 @@
                         <td>
                             <?php echo $result['nomor-hp']; ?>
                         </td>
-                    </tr>
+                        <td>
+                        <button class="btn btn-danger rounded-3" data-id="<?php echo $result['id']; ?>">Hapus</button>
+                     </td>
+                    </tr> 
                 <?php
             }
         ?>
     </tbody>
 </table>
+<script>
+   $(document).ready(function(){
+      $("button.btn-danger").click(function(){
+         var id = $(this).attr("data-id");
+         if(confirm("Anda yakin akan menghapus data ini?")){
+            $.ajax({
+               url: 'hapus.php',
+               type: 'get',
+               data: 'id=' + id,
+               success: function(data){
+                  update();
+               }
+            });
+         }
+         return false;
+      });
+   });
+</script>
