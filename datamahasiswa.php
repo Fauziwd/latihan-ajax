@@ -53,7 +53,7 @@
    $(document).ready(function(){
       $("button.btn-danger").click(function(){
          var id = $(this).attr("data-id");
-         if(confirm("Anda yakin akan menghapus data ini?")){
+         if(confirm("Beneran.. ini datanya mau dihapus?")){
             $.ajax({
                url: 'hapus.php',
                type: 'get',
