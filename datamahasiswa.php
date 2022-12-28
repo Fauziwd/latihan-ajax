@@ -53,7 +53,7 @@
    $(document).ready(function(){
       $("button.btn-danger").click(function(){
          var id = $(this).attr("data-id");
-         if(confirm("Beneran.. ini datanya mau dihapus?")){
+        if(confirm){
             $.ajax({
                url: 'hapus.php',
                type: 'get',
@@ -65,5 +65,5 @@
          }
          return false;
       });
-   });
+  });
 </script>
